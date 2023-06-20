@@ -31,3 +31,4 @@ app.listen(3333, () =>{
     console.log('Serve iniciado na porta 3333');
 });
 
+export {app};

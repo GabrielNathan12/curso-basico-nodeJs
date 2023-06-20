@@ -1,15 +1,17 @@
+import 'dotenv/config'
+import {CreateProducts1687197983796} from './migrations/1687197983796-CreateProducts';
 import { DataSource } from 'typeorm';
+import Product from '@modules/products/typeorm/entities/Product';
 
-
-const connection = new DataSource({
+export const connection = new DataSource({
     type: 'postgres',
     host: 'localhost',
-    port: 3000,
+    port: 5432,
     username: 'postgres',
-    password: 'docker',
+    password: 'welcome1',
     database: 'apivendas',
-    migrations: ['./src/shared/typeorm/migrations/*.ts'],
-    entities: []
+    migrations: [CreateProducts1687197983796],
+    entities: [Product]
 });
 
 
